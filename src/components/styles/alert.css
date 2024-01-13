@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .success {
-    @apply bg-green-100;
+    @apply bg-green-300;
 }
 
 .failed {

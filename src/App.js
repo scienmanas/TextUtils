@@ -4,17 +4,18 @@ import React, { useState } from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
 import Author from './components/Author';
+import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 
 export default function Example() {
   const [Mode, setMode] = useState('light')
   const [alert, setAlert] = useState(null)
+  const [alertAnimation, setalertAnimation] = useState("null")
 
   const showAlert = (message, type) => {
     setAlert({
@@ -22,16 +23,23 @@ export default function Example() {
       type: type
     }
     )
+    setalertAnimation("translate-x-[290px]");
+    setTimeout(() => {
+      setalertAnimation("null");
+    }, 2000);
+    
     setTimeout(() => {
       setAlert(null)
-    }, 2000);
+
+    }, 2500);
   }
 
   const toggleMode = () => {
     if (Mode === 'light') {
       setMode("dark");
-      document.body.style.backgroundColor = "#042743"
+      document.body.style.backgroundColor = "#34495e"
       showAlert("Dark Mode has been enabled", "success");
+
       // setInterval(() => {
       //   document.title = "Textutils is amazing"
       // }, 2000);
@@ -41,7 +49,7 @@ export default function Example() {
     }
     else {
       setMode('light');
-      document.body.style.backgroundColor = "white";
+      document.body.style.backgroundColor = "#ecf0f1";
       showAlert("Light mode has been enabled", "success");
     }
     console.log(Mode)
@@ -50,7 +58,7 @@ export default function Example() {
     <>
       <Router>
         <Navbar title="Textutils" mode={Mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
+        <Alert alert={alert} alertAnimation = {alertAnimation} />
         <Routes>
           <Route path='/' element={<Textform heading='Enter text to analyse' showAlert={showAlert} alert={alert} mode={Mode} />}></Route>
           <Route path="/about" element={<About />}>
@@ -58,6 +66,7 @@ export default function Example() {
           <Route path="/author" element={<Author />}>
           </Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

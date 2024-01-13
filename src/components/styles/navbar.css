@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Agustina';
+    src: local("Agustina"), url('Fonts/Agustina\ Demo.ttf');
+}
+
+@font-face {
+    font-family: 'Montez';
+    src: local("Montez"), url('Fonts/Montez-Regular.ttf');
+}
+
+
+.hero {
+    font-family: Montez, 'Courier New', Courier, monospace;
+    @apply text-3xl items-center text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-[#aa5adf] to-[#ED1E79];
+}
