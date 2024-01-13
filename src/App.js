@@ -52,7 +52,7 @@ export default function Example() {
         <Navbar title="Textutils" mode={Mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
-          <Route path='/' element={<Textform heading='Enter text to analyse' mode={Mode} showAlert={showAlert} alert={alert} />}></Route>
+          <Route path='/' element={<Textform heading='Enter text to analyse' showAlert={showAlert} alert={alert} mode={Mode} />}></Route>
           <Route path="/about" element={<About />}>
           </Route>
           <Route path="/author" element={<Author />}>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
     console.log(props.mode)
     return (
-        <div className={`navbar border-b-[1px] border-gray-400 rounded-md ${props.mode === 'dark' ? 'text-white' : 'text-black', props.mode === 'dark'?'bg-[#0e1d3d]': 'bg-blue-400'} flex justify-between py-4 px-5 bg-gray-200`}>
+        <div className={`navbar border-b-[1px] border-gray-400 rounded-md ${props.mode === 'dark' ? 'text-white' : 'text-black', props.mode === 'dark'?'bg-[#0e1d3d]': 'bg-gray-400'} flex justify-between py-4 px-5`}>
             <div className="left flex items-center">
                 <ul className='flex gap-x-5 w-fit h-fit items-center'>
                     <li className={`cursor-pointer hover:underline text-xl font-bold ${props.mode === 'dark' ? 'text-white' : 'text-black'}`}> <Link to='/'>{props.title}</Link></li>

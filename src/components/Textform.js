@@ -8,6 +8,7 @@ export default function Textform(props) {
         event.preventDefault();  // To prevent the reloading of the page
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Text changed to upper case", "success");
         // console.log("Uppercase was clicked");
         // setText("Hello World");``
     }
@@ -20,11 +21,13 @@ export default function Textform(props) {
     const ClearText = (event) => {
         event.preventDefault();
         setText("");
+        props.showAlert("Text cleared!","success");
     }
 
     const ChangeToLowerCase = (event) => {
         event.preventDefault();
         setText(text.toLowerCase());
+        props.showAlert("Text changed to lower case", "success");
     }
 
     const HandleCopy = (event) => {
@@ -32,12 +35,14 @@ export default function Textform(props) {
         let texta = document.getElementById("myBox");
         // texta.select();
         navigator.clipboard.writeText(texta.value)
+        props.showAlert("Text copied to clipboard", "success");
     }
 
     const handleExtraSpaces = (event) => {
         event.preventDefault();
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
+        props.showAlert("Extra spaces removed", "success");
     }
 
     // text = "new text";       //Wrong way to change the state
