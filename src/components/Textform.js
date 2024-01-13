@@ -4,6 +4,7 @@ import './styles/textform.css'
 
 
 export default function Textform(props) {
+    document.title = props.title
     const [text, setText] = useState("");
     const handleUpClick = (event) => {
         event.preventDefault();  // To prevent the reloading of the page
@@ -76,7 +77,7 @@ export default function Textform(props) {
                 <div className="generated-text-area">
                     <h1 className='text-2xl rounded-md font-bold bg-red-300 w-fit h-fit p-2'>Converted Text</h1>
                     <div className="converted-box">
-                    <p className={`mt-2 w-fit h-fit p-3 bg-[#2d4358] rounded-md ${props.mode === 'dark' ? 'white' : 'text-white'} `}> {text.length > 0? text: 'Please enter text to preview.'}
+                    <p className={`mt-2 w-fit h-fit p-3 bg-[#4f769b] rounded-md ${props.mode === 'dark' ? 'text-white' : 'text-white'} `}> {text.length > 0? text: 'Please enter text to preview.'}
                         </p>
                     </div>
                 </div>
