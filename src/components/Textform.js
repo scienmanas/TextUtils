@@ -47,16 +47,13 @@ export default function Textform(props) {
         props.showAlert("Extra spaces removed", "success");
     }
 
-    // text = "new text";       //Wrong way to change the state
-    // setText("new text");
     return (
         <>
             <div className="conatiner w-fit mt-24 mx-6">
                 <div className='flex flex-col mt-6 ml-1 w-fit'>
-                    <h1 className='text-4xl w-fit h-fit' style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >{props.heading}</h1>
+                    <h1 className={`${props.mode === "dark"?'text-white' : 'text-black'} text-4xl w-fit h-fit`}>{props.heading}</h1>
                     <form action="" className='w-fit flex flex-col my-6 gap-y-6'>
                         <label htmlFor="">
-
                             <textarea className={`text-area-shadow ${props.mode === "dark"?'placeholder:text-white' : 'placeholder:text-gray-600'} rounded-lg w-[100%] h-48`} type="text" name="" id="myBox" placeholder="Enter the text" value={text} onChange={handleOnChnage} style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }} ></textarea>
                             {/* <input className='rounded-lg outline-1 active:outline-blue-500' type="text" name="" id="" placeholder="Enter the text" value={text} onChange={handleOnChnage} /> */}
                         </label>

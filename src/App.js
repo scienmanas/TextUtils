@@ -14,7 +14,17 @@ import {
 
 
 export default function Example() {
-  const [Mode, setMode] = useState('light')
+  const [Mode, setMode] = useState(() => {
+    const storedMode = Cookies.get('Mode');
+    return storedMode ? storedMode : 'light';
+  });
+  if (Mode === 'light') {
+
+    document.body.style.backgroundColor = "#ecf0f1";
+  }
+  else {
+    document.body.style.backgroundColor = "#34495e"
+  }
   const [alert, setAlert] = useState(null)
   const [alertAnimation, setalertAnimation] = useState("null")
 
@@ -56,19 +66,21 @@ export default function Example() {
     // console.log(Mode)
   };
 
-    // Effect to save the mode in a cookie when it changes
-    useEffect(() => {
-      Cookies.set('Mode' ,Mode, { expires: 365 }); // Cookie will expire in 365 days
-    }, [Mode]);
-  
-    // Effect to load the mode from the cookie on component mount
-    useEffect(() => {
-      const storedMode = Cookies.get('Mode');
-      if (storedMode) {
-        setMode(storedMode);
-      }
-    }, []);
-  
+  // Effect to save the mode in a cookie when it changes
+  useEffect(() => {
+    Cookies.set('Mode', Mode, { expires: 365 }); // Cookie will expire in 365 days
+  }, [Mode]);
+
+  // Effect to load the mode from the cookie on component mount
+  useEffect(() => {
+    const storedMode = Cookies.get('Mode');
+    if (storedMode) {
+      setMode(storedMode);
+    }
+  }, []);
+
+  // document.body.style.backgroundColor = Mode
+
   return (
     <>
       <Router>
