@@ -1,12 +1,9 @@
 import React from 'react'
-// import { Switch } from "@material-tailwind/react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import './styles/navbar.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar(props) {
-    console.log(props.mode)
     return (
         <div className={`fixed top-0 w-full navbar border-b-[1px] border-gray-400 rounded-b-sm ${props.mode === 'dark' ? 'text-white bg-[#2c3e50]' : 'text-black bg-[#0d436d]'} flex justify-between py-4 px-5`}>
             <div className="left flex items-center">

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: local("Rajdhani"), url('./Fonts/Rajdhani-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'DAGGERSQUARE';
+    src: local('DAGGERSQUARE') ,url('./Fonts/DAGGERSQUARE.otf');
+}
+
+.popup-font {
+    font-family: DAGGERSQUARE, 'Courier New', Courier, monospace;
+}
+
+.pop-sub-custom {
+    font-family: Rajdhani, 'Courier New', Courier, monospace;
+    @apply font-extrabold text-lg text-slate-700;
+}

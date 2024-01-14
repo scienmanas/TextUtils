@@ -8,6 +8,13 @@
     box-shadow: 0px 0px 5px 5px #7c6add;
 }
 
+.custom-button-disabled {
+    @apply w-fit h-fit px-4 py-3 text-white font-semibold rounded-md hover:scale-105 duration-200 active:outline-dashed outline-2 outline-blue-500 active:scale-90;
+    background-image: radial-gradient(100% 100% at 100% 0, #2dd2ff 0, #1328ca 100%);
+    box-shadow: 0px 0px 5px 5px #7c6add;
+    opacity: 0.5;
+}
+
 .custom-button:hover {
     box-shadow: 0px 0px 15px 7px #27b83b ;
 }
