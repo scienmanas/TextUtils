@@ -24,4 +24,16 @@ The `TextUtils` module provides the following utility functions:
 
 ## Examples
 
+![image](https://github.com/scienmanas/TextUtils/assets/99756067/21372732-87bd-42e1-b5e3-fa0c53d29dc2)
 
+![image](https://github.com/scienmanas/TextUtils/assets/99756067/319796c5-e793-441c-b419-72a106fea1dd)
+
+![image](https://github.com/scienmanas/TextUtils/assets/99756067/337b45f6-cfd6-496c-9e7f-cdbe359bc712)
+
+## Contributions
+
+- Manas (Author)
+
+## License 
+
+This repo in under 
