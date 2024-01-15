@@ -1,7 +1,7 @@
 # Text Utils
 
 <p align="center">
-<img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page"> 
+<img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page">
 </p>
 
 This project is a collection of utility functions for text manipulation.
