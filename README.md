@@ -41,3 +41,10 @@ The `TextUtils` module provides the following utility functions:
 
 This repo is under the [MIT License](https://opensource.org/licenses/MIT).
 This repository is open for contributions
+
+## Working 
+
+- [ ] Narrator
+- [ ] Extract emails
+- [ ] Extract link
+- [ ] need to see if it can be downloaded my pdf or will apply copy command
