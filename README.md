@@ -1,6 +1,10 @@
-# Text Utils 
+# Text Utils
 
-A react app to modify text as required by user 
+<p align="center">
+<img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page">
+</p>
+
+
 
 ## Available Scripts
 
