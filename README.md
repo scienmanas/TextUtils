@@ -1,48 +1,27 @@
 # Text Utils
 
 <p align="center">
-<img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page">
+<img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page"> 
 </p>
 
 
+This project is a collection of utility functions for text manipulation.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+To use this project, follow these steps:
 
-### `npm start`
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the required dependencies by running `npm install`.
+4. Use the utility functions in your code by importing them from the `TextUtils` module.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `TextUtils` module provides the following utility functions:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Examples
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Author
-
-- [Manas](https://github.com/scienmanas)
