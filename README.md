@@ -4,7 +4,6 @@
 <img width="40%" src="https://github.com/scienmanas/TextUtils/assets/99756067/323bd04c-b7dd-47aa-9a8e-661d817b03e4" alt="main page"> 
 </p>
 
-
 This project is a collection of utility functions for text manipulation.
 
 ## Usage
@@ -37,12 +36,12 @@ The `TextUtils` module provides the following utility functions:
 
 - Manas (Author)
 
-## License 
+## License
 
 This repo is under the [MIT License](https://opensource.org/licenses/MIT).
 This repository is open for contributions
 
-## Working on 
+## Working on
 
 - [ ] Narrator
 - [ ] Extract emails
