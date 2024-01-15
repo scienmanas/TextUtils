@@ -20,7 +20,10 @@ To use this project, follow these steps:
 
 The `TextUtils` module provides the following utility functions:
 
-
+- `Convert to UpperCase`
+- `Convert to LowerCase`
+- `Remove Extra Spaces`
+- `Change Occurrences`
 
 ## Examples
 
@@ -36,4 +39,5 @@ The `TextUtils` module provides the following utility functions:
 
 ## License 
 
-This repo in under 
+This repo is under the [MIT License](https://opensource.org/licenses/MIT).
+This repository is open for contributions
