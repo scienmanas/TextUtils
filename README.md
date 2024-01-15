@@ -48,3 +48,4 @@ This repository is open for contributions
 - [ ] Extract emails
 - [ ] Extract link
 - [ ] need to see if it can be downloaded my pdf or will apply copy command
+- [ ] Alert checking when text doesn't matches.
