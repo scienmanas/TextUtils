@@ -42,7 +42,7 @@ The `TextUtils` module provides the following utility functions:
 This repo is under the [MIT License](https://opensource.org/licenses/MIT).
 This repository is open for contributions
 
-## Working 
+## Working on 
 
 - [ ] Narrator
 - [ ] Extract emails
