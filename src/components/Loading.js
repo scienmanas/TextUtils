@@ -8,7 +8,7 @@ export default function Loading(props) {
         <div className="loader">
             <div className="ring ">
                 Loading
-                <span id="loader-span"></span>
+                <span className="loader-span"></span>
             </div>
         </div>
     )
