@@ -65,6 +65,7 @@ export default function Textform(props) {
                             <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} custom-button`} onClick={HandleCopy}>Copy Text</button>
                             <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} custom-button`} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
                             <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} custom-button`} onClick={handleChangeOfOcuurence} >Change Occurrences</button>
+                            
                             {/* <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} `} onClick={handleExtraSpaces}>Narrate</button>
                             <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} custom-button`} onClick={handleExtraSpaces}>Pause</button> */}
                             {/* <button className={`${props.text.length > 0 ?'custom-button' : 'pointer-events-none custom-button-disabled'} custom-button`} onClick={handleExtraSpaces}>Extract Links</button>

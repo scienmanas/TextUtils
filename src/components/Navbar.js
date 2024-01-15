@@ -5,7 +5,7 @@ import './styles/navbar.css'
 
 export default function Navbar(props) {
     return (
-        <div className={`fixed top-0 w-full navbar border-b-[1px] border-gray-400 rounded-b-sm ${props.mode === 'dark' ? 'text-white bg-[#2c3e50]' : 'text-black bg-[#0d436d]'} flex justify-between py-4 px-5`}>
+        <div className={`fixed top-0 w-full navbar border-b-[1px] border-gray-400 rounded-b-sm ${props.mode === 'dark' ? 'text-white bg-[#0d436d]' : 'text-black bg-[#0d436d]'} flex justify-between py-4 px-5`}>
             <div className="left flex items-center">
                 <ul className='flex gap-x-5 w-fit h-fit items-center'>
                     <li className={`hero cursor-pointer hover:underline font-bold `}> <Link to='/'>{props.title}</Link></li>

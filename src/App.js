@@ -7,6 +7,7 @@ import Author from './components/Author';
 import Footer from './components/Footer';
 import PopUpPromt from './components/PopUpPromt';
 import Cookies from 'js-cookie';
+import Loading from './components/Loading';
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,7 +22,13 @@ export default function Example() {
   const [searchText, setSearchText] = useState("")
   const [replaceWith, setReplaceWith] = useState("")
   const [text, setText] = useState("");
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   const [Mode, setMode] = useState(() => {
     const storedMode = Cookies.get('Mode');
@@ -29,7 +36,6 @@ export default function Example() {
   });
 
   if (Mode === 'light') {
-
     document.body.style.backgroundColor = "#ecf0f1";
   }
   else {
@@ -74,8 +80,6 @@ export default function Example() {
     document.getElementById("prompt-box-2").classList.add("flex");
     setSearchText("");
     setReplaceWith("");
-    console.log(searchText);
-    console.log(replaceWith);
   }
 
   const closePrompt = () => {
@@ -85,8 +89,6 @@ export default function Example() {
     document.getElementById("prompt-box-2").classList.add("hidden");
     setSearchText("");
     setReplaceWith("");
-    console.log(searchText);
-    console.log(replaceWith);
     showAlert("Prompt cancelled", "failed");
   }
 
@@ -95,25 +97,39 @@ export default function Example() {
     document.getElementById("prompt-box-1").classList.add("hidden");
     document.getElementById("prompt-box-2").classList.remove("flex");
     document.getElementById("prompt-box-2").classList.add("hidden");
-    let newText = text.split(searchText);
-    setText(newText.join(replaceWith));
-    showAlert(`${searchText} replaced with ${replaceWith}`, "success");
-    console.log(searchText);
-    console.log(replaceWith);
+    if (searchText.length > 0 && replaceWith.length > 0) {
+      let newText = text.split(searchText);
+      console.log(newText)
+      if (newText.length > 0) {
+        setText(newText.join(replaceWith));
+        showAlert(`${searchText} replaced with ${replaceWith}`, "success");
+      }
+      else {
+        showAlert("No occurences found", "failed");
+      }
+    }
+    else {
+      showAlert("Please fill all the fields", "failed");
+    }
+
   }
 
   useEffect(() => {
     Cookies.set('Mode', Mode, { expires: 365 }); // Cookie will expire in 365 days
   }, [Mode]);
 
+  if (loading) {
+    return <Loading loading={loading} />
+  }
+
   return (
     <>
-      <PopUpPromt showPopUp={showPopUp} closePrompt={closePrompt} submitPrompt={submitPrompt} heading="Replace the text" searchText={searchText}  replaceWith={replaceWith} setSearchText={setSearchText} setReplaceWith={setReplaceWith} />
+      <PopUpPromt showPopUp={showPopUp} closePrompt={closePrompt} submitPrompt={submitPrompt} heading="Replace the text" searchText={searchText} replaceWith={replaceWith} setSearchText={setSearchText} setReplaceWith={setReplaceWith} />
       <Router>
         <Navbar title="Textutils" mode={Mode} toggleMode={toggleMode} />
         <Alert alert={alert} alertAnimation={alertAnimation} />
         <Routes>
-          <Route path='/' element={<Textform heading='Enter text to analyse' text={text} setText={setText} showAlert={showAlert} alert={alert} mode={Mode} showPopUp={showPopUp} title="TextUtils - Home" searchText={searchText}  replaceWith={replaceWith} setSearchText={setSearchText} setReplaceWith={setReplaceWith}/>}></Route>
+          <Route path='/' element={<Textform heading='Enter text to analyse' text={text} setText={setText} showAlert={showAlert} alert={alert} mode={Mode} showPopUp={showPopUp} title="TextUtils - Home" searchText={searchText} replaceWith={replaceWith} setSearchText={setSearchText} setReplaceWith={setReplaceWith} />}></Route>
           <Route path="/about" element={<About mode={Mode} title="TextUtils - about" />}>
           </Route>
           <Route path="/author" element={<Author mode={Mode} title="TextUtils - author" />}>
@@ -148,3 +164,20 @@ export default function Example() {
 // };
 
 // document.body.classList.add("hi-class");
+
+// useEffect(() => {
+//   const fetchData = async () => {
+//     // Fetch or load your data here
+//     // For example, if you are fetching data from an API:
+//     // const response = await fetch('your_api_url');
+//     // const data = await response.json();
+
+//     // For now, let's simulate loading by waiting for 2000 milliseconds
+//     await new Promise(resolve => setTimeout(resolve, 2000));
+
+//     // Set loading to false after data is fetched or loaded
+//     setLoading(false);
+//   };
+
+//   fetchData();
+// }, []); // Empty dependency array means this effect runs once when the component mounts
